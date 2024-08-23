@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "_render_elements.html" import render_field %}
+{% block title %}
+Super user
+{% endblock %}
+{% block content %}
+
+<body>
+    <h1>Hi {{ current_user.username }}</h1>
+    
+
+    <a href="/create_adm" class="button">Create Admin</a>
+    <a href="/user_signup" class="button">Create User</a>
+
+    {% endblock %}
+
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "_render_elements.html" import render_field %}
+{% block title %}
+create_accounts
+{% endblock %}
+{% block content %}
+<h1>Create Admin</h1>
+<form method="post" action="{{ url_for('create_adm') }}">
+    {{ form.csrf_token }}
+    {{ render_field(form.username) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.password) }}
+    {{ render_field(form.usertype) }}
+    {{ form.submit }}
+
+</form>
+{% endblock %}
